@@ -84,6 +84,7 @@ h2 {
     user-select: none;
     outline: none;
     text-shadow: 0 0 0px rgb(0, 255, 0);
+    transition: opacity 0.1s ease-in-out;
     
 }
 
@@ -92,6 +93,7 @@ h2::before {
     color: rgb(0, 255, 0);
     pointer-events: none;
     cursor: none;
+    transition: opacity 0.1s ease-in-out;
     
 }
 
@@ -101,6 +103,17 @@ h2:focus::before {
     pointer-events: none; 
     cursor: none;
     animation: scaleAnimation 2s infinite;
+    transition: opacity 0.1s ease-in-out;
+
+}
+
+h2.animar::before {
+  animation: piscar 0.5s ease-in-out 1;
+  content: "< VAMBORA >";
+}
+
+.animar {
+    animation: piscar 0.5s ease-in-out 1;
 }
 
 h2:focus {
@@ -108,6 +121,8 @@ h2:focus {
     pointer-events: none; 
     cursor: none;
     animation: scaleAnimation 2s infinite;
+    transition: opacity 0.1s ease-in-out;
+    
 }
 
 @keyframes scaleAnimation {
@@ -177,6 +192,13 @@ h2:focus {
         opacity: 1;
         text-shadow: 0 0 40px rgb(0, 255, 0), 0 0 80px rgb(0, 255, 0);
     }
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    25% { opacity: 0; }
+    50% { opacity: 1; }
+    75% { opacity: 0; }
 }
 
 
