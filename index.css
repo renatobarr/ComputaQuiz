@@ -1,0 +1,185 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(imagens/tela\ 2.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none; 
+    cursor: none;
+    cursor: not-allowed; 
+}
+
+.textureBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('imagens/tela1.gif');
+    background-size: cover;
+    background-position: center;
+    mix-blend-mode: difference;
+    opacity: 0.15;
+    z-index: 9999;
+    pointer-events: none;
+    cursor: not-allowed; 
+}
+
+h1{
+    color: rgb(0, 255, 0);
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 700;
+    font-size: 100px;
+    margin: 150px;
+    padding: 0;
+    pointer-events: none; 
+    cursor: not-allowed; 
+    user-select: none;
+    outline: none;
+
+    animation: flickerGlow 2.5s infinite;
+    text-shadow:
+        0 0 10px rgb(0, 255, 0),
+        0 0 20px rgb(0, 255, 0),
+        0 0 40px rgb(0, 255, 0),
+        0 0 80px rgb(0, 255, 0);
+    transition: opacity 0.2s;
+}
+
+h1:focus {
+    animation-play-state: paused;
+    opacity: 1;
+    transform: scale(1.1);
+    text-shadow:
+        0 0 40px rgb(0, 255, 0),
+        0 0 80px rgb(0, 255, 0),
+        0 0 120px rgb(0, 255, 0);
+    transition: transform 0.2s, opacity 0.2s;
+    pointer-events: none;
+    cursor: none;
+}
+
+h2 {
+
+    animation-play-state: running;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;    
+    margin: 10px;
+    padding: 0;
+    cursor: none;
+    pointer-events: none;
+    user-select: none;
+    outline: none;
+    text-shadow: 0 0 0px rgb(0, 255, 0);
+    
+}
+
+h2::before {
+    content: "SELECIONE AQUI";
+    color: rgb(0, 255, 0);
+    pointer-events: none;
+    cursor: none;
+    
+}
+
+h2:focus::before {
+    content: "< PRESSIONE ENTER >";
+    text-shadow: 0 0 10px rgb(0, 255, 0);
+    pointer-events: none; 
+    cursor: none;
+    animation: scaleAnimation 2s infinite;
+}
+
+h2:focus {
+    animation-play-state: paused;
+    pointer-events: none; 
+    cursor: none;
+    animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+@keyframes glow {
+      from {
+        text-shadow: 0 0 5px rgb(0, 255, 0);
+      }
+      to {
+        text-shadow: 0 0 10px rgb(0, 255, 0), 0 0 20px rgb(0, 255, 0), 0 0 30px rgb(0, 255, 0);
+      }
+}
+
+@keyframes flickerGlow {
+    0% {
+        opacity: 0.7;
+        text-shadow: 0 0 10px rgb(0, 255, 0), 0 0 20px rgb(0, 255, 0);
+    }
+    10% {
+        opacity: 1;
+        text-shadow: 0 0 20px rgb(0, 255, 0), 0 0 40px rgb(0, 255, 0);
+    }
+    20% {
+        opacity: 0.8;
+        text-shadow: 0 0 10px rgb(0, 255, 0), 0 0 30px rgb(0, 255, 0);
+    }
+    25% {
+        opacity: 0.5;
+        text-shadow: 0 0 5px rgb(0, 255, 0);
+    }
+    30% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgb(0, 255, 0), 0 0 60px rgb(0, 255, 0);
+    }
+    40% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgb(0, 255, 0);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 40px rgb(0, 255, 0), 0 0 80px rgb(0, 255, 0);
+    }
+    60% {
+        opacity: 0.8;
+        text-shadow: 0 0 20px rgb(0, 255, 0), 0 0 40px rgb(0, 255, 0);
+    }
+    70% {
+        opacity: 0.6;
+        text-shadow: 0 0 10px rgb(0, 255, 0);
+    }
+    80% {
+        opacity: 1;
+        text-shadow: 0 0 30px rgb(0, 255, 0), 0 0 60px rgb(0, 255, 0);
+    }
+    90% {
+        opacity: 0.7;
+        text-shadow: 0 0 10px rgb(0, 255, 0), 0 0 20px rgb(0, 255, 0);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 40px rgb(0, 255, 0), 0 0 80px rgb(0, 255, 0);
+    }
+}
+
+
+
+
+
