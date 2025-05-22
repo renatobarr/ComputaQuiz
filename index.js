@@ -29,10 +29,21 @@ document.addEventListener("keydown", (e) => {
       const estilo = window.getComputedStyle(foco);
       const opacidade = parseFloat(estilo.opacity);
 
-      if (opacidade >= 0.9) {
-        alert("uepa");
-      } else {
-        alert("uopa");
+      if (opacidade <= 0.5) {
+        alert("Não chegou nem perto!");
+
+      } else if (opacidade >= 0.51 && opacidade <= 0.7 ) {
+        alert("Morreu na praia!");
+
+      } else if (opacidade >= 0.71 && opacidade <= 0.8 ) {
+        alert("Tá quase!");
+      
+      } else if (opacidade >= 0.81 && opacidade <= 0.9 ) {
+        alert("NA TRAVEEE!");
+      
+      } else if (opacidade >= 0.91) {
+        alert("Parabéns seu fanfarrão!");
+      
       }
 
     } else if (foco.tagName === "H2") {
