@@ -9,12 +9,29 @@ document.addEventListener("DOMContentLoaded", () => {
   elementos[indexAtual].focus();
 
   document.addEventListener("keydown", (e) => {
+
+    const balao1 = document.getElementById("imagem1");
+    const balao2 = document.getElementById("imagem2");
+    const balao3 = document.getElementById("imagem3");
+    const balao4 = document.getElementById("imagem4");
+    const balao5 = document.getElementById("imagem5");
+
     if (e.key === "ArrowDown" || e.key === "ArrowRight") {
       indexAtual = (indexAtual + 1) % elementos.length;
       elementos[indexAtual].focus();
+      balao1.style.opacity = "0";
+      balao2.style.opacity = "0";
+      balao3.style.opacity = "0";
+      balao4.style.opacity = "0";
+      balao5.style.opacity = "0";
+      balao1.style.transform = "translateY(0)";
+      balao2.style.transform = "translateY(0)";
+      balao3.style.transform = "translateY(0)";
+      balao4.style.transform = "translateY(0)";
+      balao5.style.transform = "translateY(0)";
     } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
       indexAtual = (indexAtual - 1 + elementos.length) % elementos.length;
-      elementos[indexAtual].focus();  
+      elementos[indexAtual].focus();
 
     }
   });
@@ -28,21 +45,36 @@ document.addEventListener("keydown", (e) => {
       
       const estilo = window.getComputedStyle(foco);
       const opacidade = parseFloat(estilo.opacity);
+      const balao1 = document.getElementById("imagem1");
+      const balao2 = document.getElementById("imagem2");
+      const balao3 = document.getElementById("imagem3");
+      const balao4 = document.getElementById("imagem4");
+      const balao5 = document.getElementById("imagem5");
 
       if (opacidade <= 0.5) {
-        alert("Não chegou nem perto!");
+        /*alert("Não chegou nem perto!");*/
+        balao1.style.opacity = "1";
+        balao1.style.transform = "translateY(30px)";
 
-      } else if (opacidade >= 0.51 && opacidade <= 0.7 ) {
-        alert("Morreu na praia!");
-
-      } else if (opacidade >= 0.71 && opacidade <= 0.8 ) {
-        alert("Tá quase!");
+      } else if (opacidade >= 0.51 && opacidade <= 0.6 ) {
+        /*alert("Morreu na praia!");*/
+        balao2.style.opacity = "1";
+        balao2.style.transform = "translateY(30px)";
+        
+      } else if (opacidade >= 0.61 && opacidade <= 0.7 ) {
+        /*alert("Tá quase!");*/
+        balao3.style.opacity = "1";
+        balao3.style.transform = "translateY(30px)";
       
-      } else if (opacidade >= 0.81 && opacidade <= 0.9 ) {
-        alert("NA TRAVEEE!");
+      } else if (opacidade >= 0.71 && opacidade <= 0.9 ) {
+        /*alert("NA TRAVEEE!");*/
+        balao5.style.opacity = "1";
+        balao5.style.transform = "translateY(30px)";
       
       } else if (opacidade >= 0.91) {
-        alert("Parabéns seu fanfarrão!");
+        /*alert("Parabéns seu fanfarrão!");*/
+        balao4.style.opacity = "1";
+        balao4.style.transform = "translateY(30px)";
       
       }
 
@@ -82,6 +114,22 @@ document.addEventListener("keydown", (e) => {
   let contadorCliques = 0;
   document.addEventListener("click", () => {
     contadorCliques++;
+    const balao1 = document.getElementById("imagem1");
+    const balao2 = document.getElementById("imagem2");
+    const balao3 = document.getElementById("imagem3");
+    const balao4 = document.getElementById("imagem4");
+    const balao5 = document.getElementById("imagem5");
+
+    balao1.style.opacity = "0";
+    balao2.style.opacity = "0";
+    balao3.style.opacity = "0";
+    balao4.style.opacity = "0";
+    balao5.style.opacity = "0";
+    balao1.style.transform = "translateY(0)";
+    balao2.style.transform = "translateY(0)";
+    balao3.style.transform = "translateY(0)";
+    balao4.style.transform = "translateY(0)";
+    balao5.style.transform = "translateY(0)";
 
     if (contadorCliques === 5) {
       alert("Você clicou 10 vezes!");
