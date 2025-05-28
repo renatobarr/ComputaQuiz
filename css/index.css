@@ -3,7 +3,7 @@ body{
     padding: 0;
     overflow-x: hidden;
     background-color: black;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(imagens/tela\ 2.gif);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../imagens/tela\ 2.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -26,7 +26,7 @@ body{
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('imagens/tela1.gif');
+    background-image: url('../imagens/tela1.gif');
     background-size: cover;
     background-position: center;
     mix-blend-mode: difference;

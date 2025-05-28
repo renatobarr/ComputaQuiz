@@ -71,7 +71,7 @@ document.addEventListener("keydown", (e) => {
 
           setTimeout(() => {
             foco.classList.remove('animar');
-            window.location.href = 'test.html';
+            window.location.href = './cadastro.html';
           }, 500); 
 
         }
