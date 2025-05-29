@@ -3,7 +3,7 @@ body{
     padding: 0;
     overflow-x: hidden;
     background-color: rgb(0, 0, 0);
-    /*background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../imagens/tela\ 2.gif);*/
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(../imagens/tela\ 2.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -71,6 +71,7 @@ h2 {
     font-size: 70px;    
     margin-top: 0px;
     padding: 0;
+    margin-bottom: 0px;
     cursor: none;
     pointer-events: none;
     user-select: none;
@@ -86,20 +87,39 @@ h2 {
     
 }
 
-.boxNickname{
+.boxNickname {
     border-color: rgb(0, 255, 0);
+    border-style: solid;
     border-radius: 50px;
-    width: 50%;
-    height: 100%;
+    border-width: 5px;
+    width: 25vw;
+    height: 80vh;
+    background-color: red; 
+    margin-bottom: 50px;
+    box-shadow:  0 5px 20px rgb(0, 255, 0);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+
 }
 
-
+input[type = "text"]{
+    width: 2em;
+    text-align: center;
+    font-size: 30px;
+    font-family: "Pixelify Sans", sans-serif;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    border-radius: 0px;
+    border-color: rgb(0, 255, 0);
+}
 
 .animar {
     animation: piscar 0.5s ease-in-out 1;
 }
-
-
 
 @keyframes scaleAnimation {
     0%, 100% {
