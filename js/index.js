@@ -13,6 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowDown" || e.key === "ArrowRight") {
       indexAtual = (indexAtual + 1) % elementos.length;
       elementos[indexAtual].focus();
+
+      const balao1 = document.getElementById("imagem1");
+      const balao2 = document.getElementById("imagem2");
+      const balao3 = document.getElementById("imagem3");
+      const balao4 = document.getElementById("imagem4");
+      const balao5 = document.getElementById("imagem5");
+
+      balao1.style.opacity = "0";
+      balao2.style.opacity = "0";
+      balao3.style.opacity = "0";
+      balao4.style.opacity = "0";
+      balao5.style.opacity = "0";
+      balao1.style.transform = "translateY(0)";
+      balao2.style.transform = "translateY(0)";
+      balao3.style.transform = "translateY(0)";
+      balao4.style.transform = "translateY(0)";
+      balao5.style.transform = "translateY(0)";
      
     } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
       indexAtual = (indexAtual - 1 + elementos.length) % elementos.length;
@@ -30,6 +47,11 @@ document.addEventListener("keydown", (e) => {
       
       const estilo = window.getComputedStyle(foco);
       const opacidade = parseFloat(estilo.opacity);
+      const balao1 = document.getElementById("imagem1");
+      const balao2 = document.getElementById("imagem2");
+      const balao3 = document.getElementById("imagem3");
+      const balao4 = document.getElementById("imagem4");
+      const balao5 = document.getElementById("imagem5");
 
       if (opacidade <= 0.5) {
         /*alert("Não chegou nem perto!");*/
@@ -61,6 +83,7 @@ document.addEventListener("keydown", (e) => {
     } else if (foco.tagName === "H2") {
       
       const elementos = Array.from(document.querySelectorAll("h1, h2"));
+      
         
       let indexAtual = 1;
       elementos[indexAtual].focus();
